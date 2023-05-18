@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :get_article, only: [:show, :edit, :update, :destroy]
+  before_action :obtain_article, only: [:show, :edit, :update, :destroy]
+
   def index
     @articles = Article.all
   end
@@ -12,7 +13,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.update(params_article)
-    redirect_to task_path(@task)
+    redirect_to task_path(@article)
   end
 
   def new
@@ -32,7 +33,7 @@ class ArticlesController < ApplicationController
 
   private
 
-  def get_article
+  def obtain_article
     @article = Article.find(params[:id])
   end
 
