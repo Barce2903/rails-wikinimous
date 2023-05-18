@@ -15,8 +15,7 @@
  */
  body {
   box-sizing: content-box;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
  }
  a {
   text-decoration: none;
@@ -27,11 +26,22 @@
   align-items: center;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: aquamarine;
+  background-color: #e7e7e7;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 .container {
-  margin-left: 17%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
-.row_articles {
-
+/* INDEX part */
+.row_articles h2 {
+  font-size: xx-large;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.row_articles p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
