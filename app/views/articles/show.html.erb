@@ -1,0 +1,13 @@
+<h1>
+  <%= @article.title %>
+  <small>
+    <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'text-decoration-none' do %>
+      <i class="fa-solid fa-trash"></i>
+    <% end %>
+    <%= link_to article_edit_path(@article), class: 'text-decoration-none' do %>
+      <i class="fa-solid fa-pencil"></i>
+    <% end %>
+  </small>
+</h1>
+<hr>
+<p><%= @article.content %></p>
